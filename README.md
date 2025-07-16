@@ -17,7 +17,7 @@ Welcome to **Doozie** — a beautifully minimal yet powerful task manager built 
 ## 📸 Preview
 
 ![TaskMate Preview](./asset/first.png)
-![TaskMate Preview](./asset/second.png.png)
+![TaskMate Preview](./asset/second.png)
 
 ---
 
