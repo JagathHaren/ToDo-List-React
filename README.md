@@ -47,13 +47,17 @@ Welcome to **Doozie** — a beautifully minimal yet powerful task manager built 
 git clone https://github.com/Developer200010/Doozie.git
 ```
 
+### 2. Change directory
+
 ```bash
 cd Doozie
 ```
+### 3. install require modules
 
 ```bash
 npm install
 ```
+### 4. use this command to run locally.
 
 ```bash
 npm run dev
