@@ -1,4 +1,4 @@
-# 📝 TaskMate — Your Daily To-Do Companion
+# 📝 Doozie — Your Daily To-Do Companion
 
 Welcome to **Doozie** — a beautifully minimal yet powerful task manager built with **React + Tailwind CSS**. Manage your day, keep track of your goals, and never miss a task again.
 
@@ -16,8 +16,10 @@ Welcome to **Doozie** — a beautifully minimal yet powerful task manager built 
 
 ## 📸 Preview
 
-![TaskMate Preview](./asset/first.png)
-![TaskMate Preview](./asset/second.png)
+<p align="center">
+  <img src="./asset/first.png" alt="Doozie" width="45%" style="margin-right:10px;">
+  <img src="./asset/second.png" alt="Doozie" width="45%">
+</p>
 
 ---
 
@@ -42,5 +44,19 @@ Welcome to **Doozie** — a beautifully minimal yet powerful task manager built 
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/taskmate.git
-cd taskmate
+git clone https://github.com/Developer200010/Doozie.git
+```
+
+```bash
+cd Doozie
+```
+
+```bash
+npm install
+```
+
+```bash
+npm run dev
+```
+
+## Now you are go to go✌️.
