@@ -52,12 +52,12 @@ git clone https://github.com/Developer200010/Doozie.git
 ```bash
 cd Doozie
 ```
-### 3. install require modules
+### 3. Install require modules
 
 ```bash
 npm install
 ```
-### 4. use this command to run locally.
+### 4. Use this command to run locally.
 
 ```bash
 npm run dev
