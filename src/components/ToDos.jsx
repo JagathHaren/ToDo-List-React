@@ -65,9 +65,9 @@ const ToDos = ({ task, deleteTask, updateTask }) => {
 
       {/* Modal */}
       {showModal && (
-        <div className="fixed inset-0 bg-opacity-30 backdrop-blur-xl flex items-center justify-center z-50 text-white">
+        <div className="fixed inset-0 bg-opacity-30 backdrop-blur-xl flex items-center justify-center z-50 text-white p-2">
           <div
-            className={`bg-gray-800 p-6 rounded-xl shadow-2xl sm:w-96 w-80  transform transition-all duration-300
+            className={`bg-gray-800 p-6 rounded-xl shadow-2xl sm:w-96 w-96  transform transition-all duration-300
               ${animateOut ? 'fade-Out' : 'fade-In'}`}
           >
             <h2 className="text-lg font-semibold mb-4">Edit Task</h2>
