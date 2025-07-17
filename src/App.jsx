@@ -47,6 +47,8 @@ const App = () => {
 
   //  delete functionality
   const deleteTask = (idToDelete) => {
+    const confirm1 = window.confirm("Are you sure?");
+    if(!confirm1) return;
     setTasks((preTasks) => preTasks.filter(task => task.id !== idToDelete))
   }
 
@@ -55,7 +57,7 @@ const App = () => {
     setTasks(preTasks => preTasks.map(task => task.id === idToUpdate ? { ...task, text: newText } : task))
   }
   return (
-    <div className="font-serif h-screen overflow-hidden bg-gray-800 text-white flex flex-col items-center px-4 py-8">
+    <div className="font-serif h-screen overflow-hidden bg-gray-900 text-white flex flex-col items-center px-4 py-8">
       <div className="w-full h-full max-w-5xl bg-gray-800 border-2 rounded-2xl shadow-lg p-6 flex flex-col gap-6 overflow-hidden">
         <Header />
         <Input task={task} setTask={setTask} storeTask={storeTask} clearAllTasks={clearAllTasks} />
