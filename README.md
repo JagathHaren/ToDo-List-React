@@ -1,6 +1,5 @@
 # ToDo List
 
-
 -  Add, edit, delete and clear all tasks
 -  Persistent storage using localStorage
 -  Responsive design
@@ -17,3 +16,6 @@
 ### 2. Change directory using cd
 ### 3. Install modules using npm install
 ### 4. Run the app using npm run dev
+
+
+GitHub Link : https://github.com/JagathHaren/ToDo-List-React
