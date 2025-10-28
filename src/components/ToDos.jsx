@@ -1,36 +1,33 @@
 import React, { useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
-import { SquarePen } from 'lucide-react';
-import { Trash } from 'lucide-react';
-import { Upload } from 'lucide-react';
-
-
-
+import { SquarePen,Trash,Upload } from 'lucide-react';
 
 const ToDos = ({ task, deleteTask, updateTask }) => {
   const [line, setLine] = useState(false);
   const [editText, setEditText] = useState(task.text);
-  const [showModal, setShowModal] = useState(false);     // Controls modal visibility
-  const [animateOut, setAnimateOut] = useState(false);   // Triggers exit animation
+  const [showModal, setShowModal] = useState(false);     
+  const [animateOut, setAnimateOut] = useState(false);   
 
-  const openModal = () => {
+  const openModal = () => 
+    {
     setShowModal(true);
     setAnimateOut(false);
   };
 
-  const closeModal = () => {
+  const closeModal = () => 
+    {
     setAnimateOut(true);
-    setTimeout(() => setShowModal(false), 300); // Wait for exit animation
+    setTimeout(() => setShowModal(false), 300); 
   };
 
-  const handleUpdate = () => {
+  const handleUpdate = () => 
+    {
     updateTask(task.id, editText);
     closeModal();
   };
 
   return (
     <>
-      {/* Task Row */}
       <div className="bg-gray-700 px-4 py-3 rounded-md flex justify-between items-center shadow-sm hover:shadow-md transition group relative z-10">
         <div className="flex items-center gap-3 w-full">
           <input
@@ -59,11 +56,8 @@ const ToDos = ({ task, deleteTask, updateTask }) => {
             >
               <Trash />
             </button>
-          </div>
-        </div>
+          </div></div>
       </div>
-
-      {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-opacity-30 backdrop-blur-xl flex items-center justify-center z-50 text-white p-2">
           <div
@@ -72,16 +66,14 @@ const ToDos = ({ task, deleteTask, updateTask }) => {
           >
             <h2 className="text-lg font-semibold mb-4">Edit Task</h2>
             <TextareaAutosize
-              value={editText}
-              onChange={(e) => setEditText(e.target.value)}
+              value={editText}onChange={(e) => setEditText(e.target.value)}
               className="w-full border border-gray-300 px-3 py-2 rounded-md mb-4 outline-none text-black bg-white"
             />
             <div className="flex justify-end gap-3">
               <button
                 onClick={closeModal}
                 className="px-4 py-2 text-sm text-gray-50 bg-gray-400 rounded hover:bg-gray-300 hover:text-black transition duration-150 hover:cursor-pointer"
-              >
-                Cancel
+              >Cancel
               </button>
               <button
                 onClick={handleUpdate}
@@ -89,12 +81,11 @@ const ToDos = ({ task, deleteTask, updateTask }) => {
               >
                 <Upload />
               </button>
-            </div>
-          </div>
+            </div> </div>
         </div>
       )}
     </>
-  );
+  )
 };
 
 export default ToDos;

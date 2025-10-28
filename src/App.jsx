@@ -13,27 +13,27 @@ const App = () => {
     return stored ? JSON.parse(stored) : [];
   });
 
-  //storing data in localStorage
+  //storing data using localStorage
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
 
   const clearAllTasks = () => {
     if (tasks == "") {
-      alert("⚠️ No tasks found — nothing to delete!");
+      alert("No tasks present to delete");
       return
     }
-    const confirmed = window.confirm("⚠️ Heads up! This will permanently delete all tasks!");
+    const confirmed = window.confirm("Are you sure you want to delete all tasks?");
     if (!confirmed) return;
     localStorage.removeItem('todo-tasks');
     setTasks([]);
   };
 
 
-  //creating and reading (storing tasks)
+  //creating and reading of tasks
   const storeTask = () => {
     if (task.trim() == "") {
-      alert("Oops! You forgot to enter a task.")
+      alert("Please enter a task before clicking.")
     }
     if (task.trim() !== "") {
       const newTask = {

@@ -1,12 +1,12 @@
-import logo from "../../public/logo.svg"
+import { ScrollText } from 'lucide-react';
 
 const Header = () => {
   return (
-    <div className="w-full flex justify-between items-center">
-      <h1 className="text-2xl font-bold tracking-wide"><img src={logo} alt="" width={40} height={40} />Doozie</h1>
-      <span className="text-sm text-gray-400">Stay organized</span>
+    <div className="w-full flex items-center">
+      <ScrollText/>
+      <h1 className="font-bold text-4xl tracking-wide p-2">To Do List</h1>
     </div>
-  );
-};
+  )
+}
 
 export default Header;
