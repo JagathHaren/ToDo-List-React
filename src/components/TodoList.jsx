@@ -1,4 +1,3 @@
-import React from 'react';
 import ToDos from './ToDos';
 
 export const TodoList = ({ tasks, deleteTask, updateTask }) => {

@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Input from './components/Input';
 import { TodoList } from './components/TodoList';
 import { v4 as uuidv4 } from "uuid"
-import "./App.css"
+import "./utils/App.css"
 
 
 const App = () => {
@@ -57,8 +57,8 @@ const App = () => {
     setTasks(preTasks => preTasks.map(task => task.id === idToUpdate ? { ...task, text: newText } : task))
   }
   return (
-    <div className="font-serif h-screen overflow-hidden bg-gray-900 text-white flex flex-col items-center px-4 py-8">
-      <div className="w-full h-full max-w-5xl bg-gray-800 border-2 rounded-2xl shadow-lg p-6 flex flex-col gap-6 overflow-hidden">
+    <div className="font-serif h-screen overflow-hidden bg-purple-800 text-white flex flex-col items-center px-4 py-8">
+      <div className=" w-full h-full max-w-6xl bg-blue-950 border-2 rounded-2xl shadow-blue-50 shadow-2xl p-6 flex flex-col gap-6 overflow-hidden">
         <Header />
         <Input task={task} setTask={setTask} storeTask={storeTask} clearAllTasks={clearAllTasks} />
         <TodoList tasks={tasks} deleteTask={deleteTask} updateTask={updateTask} />
